@@ -42,6 +42,9 @@ export class AppComponent {
 
     return this.httpClient.get<InputObject[]>(url).subscribe(res =>{
       this.loadedPosts = res;
+      console.log(res)
+    }, error => {
+      console.log(error)
     })
   }
 
